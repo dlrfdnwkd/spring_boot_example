@@ -1,5 +1,7 @@
 package com.dlrfdnwkd.testspringboot.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,5 +21,10 @@ public class UserController {
 	@PostMapping("/findByName")
 	public User findByName(String name) {
 		return userService.findByName(name);
+	}
+	@ResponseBody
+	@PostMapping("/find")
+	public List<User> find(){
+		return userService.find();
 	}
 }
