@@ -26,5 +26,4 @@ public class UserEntity {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
 }
